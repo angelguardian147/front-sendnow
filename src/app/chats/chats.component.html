@@ -1,0 +1,64 @@
+
+<div class="body">
+
+    <div class="container">
+
+        <!-- cards para los mensajes  -->
+
+        <div class="card" (click)="onShow(cht.users_email[0])" *ngFor="let cht of chats">
+
+            <div class="foto">
+                <img class="pt" src="../../assets/face3.jpg" alt="Not found">
+            </div>
+    
+            <div class="content">
+
+                <div class="info">
+    
+                    <div class="contact-info">
+                        <p class="p1">{{cht.name}}</p>
+                    </div>
+    
+                    <div class="resume">
+                        <p>{{cht.content[chats.length-1].message}}</p>
+                    </div>
+        
+                </div>
+    
+                <div class="more">
+    
+                    <div class="options">
+                        <!-- <span class="points">&#8230;</span> -->
+                        <span class="points">ooo</span>
+                        <div class="menu">
+                            <div class="box-btn">
+                    
+                                <div class="delete">
+                                   <p>Eliminar</p> 
+                                </div>
+                        
+                                <div class="edit">
+                                   <p>Editar</p> 
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="last-date">
+                        <p>{{cht.content[chats.length-1].date | date}}</p>
+                    </div>
+    
+                </div>
+
+            </div>
+    
+        </div>
+
+        <div *ngIf="listEmpty()">
+            <p>Not Found</p>
+        </div>
+
+    </div>
+
+</div>

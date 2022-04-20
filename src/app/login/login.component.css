@@ -1,0 +1,166 @@
+.body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70em;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 2em;
+}
+
+/* formulario de sesión */
+
+.container .login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    width: 40vw;
+    border-radius: 12px;
+    border: 1px solid rgb(26, 25, 25);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: #000000;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+} 
+
+.container .login-form:hover{
+    transform: scale(1.1);
+}
+
+.container .login-form .title-login{
+    color: #7070fffd;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 25px;
+    font-weight: 800;
+    line-height: 0.8px;
+}
+
+.container .login-form .warpinput100{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 8px;
+}
+
+.container .login-form .pass{
+    margin-top: 10px;
+}
+
+.container .login-form input{
+    line-height: .5px;
+    color: #666666;
+    background-color: #242932;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+    border: none;
+    outline: none;
+}
+
+.container .login-form .fn-ln .fn{
+    margin-right: .5em;
+}
+
+.container .login-form .fn-ln .ln{
+    margin-left: .5em;
+}
+
+.container .login-form button{
+    line-height: .5px;
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+    background-color:	#242932;
+    color: #3535eefd;
+    text-align: center;
+    padding: 0 15px;
+    border: none;
+    cursor: pointer;
+    margin: 12px 12px 0 12px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.container .login-form button:hover{
+    background: #15181d;
+}
+
+.container .login-form .warpinput100 .icon-main{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 25px;
+    pointer-events: none;
+}
+
+.container .login-form .warpinput100 .icon-ln{
+    left: 14.5em;
+}
+
+.container .login-form .warpinput100 .icon-main svg{
+    fill: #666666;
+}
+
+/* formulario de registro */
+
+.container .pop-menu{
+    position: fixed;
+    top: 3.5em;
+    left: 25em;
+    opacity: 0;
+    pointer-events: none;
+} 
+
+.container.show .pop-menu{
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+    transform: scale(1.1);
+}
+
+.container .login-form .close{
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    font-size: 24px;
+    color: #d4661cc0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container.login-form .close:hover{
+    color: #fc6705fa;
+}
+
+.errMsg span{
+    font-size: .8em;
+    color: #fc6705fa;
+}
+
+.errMsg2 span{
+    font-size: .8em;
+    color: #fc6705fa;
+}

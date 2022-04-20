@@ -1,0 +1,464 @@
+
+
+.body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70em;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 2em;
+}
+
+/* ******************************************************************************* */
+/* Message box */
+
+.container .btn-f .alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 12em;
+    left: 30em;
+    width: 30vw;
+    height: 30vh;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #000000;
+    border: 1px solid rgb(26, 25, 25);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.container .btn-f.message .alert{
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+    transform: scale(1.1);
+}
+
+.container .btn-f .alert .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.container .btn-f .alert .head p{
+    color: #7070fffd;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 25px;
+    font-size: 1.2em;
+    line-height: 0.8px;
+}
+
+.container .btn-f .alert .middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.container .btn-f .alert .middle p{
+    width: 90%;
+    text-align: center;
+}
+
+.container .btn-f .alert .foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.container .btn-f .alert .foot button{
+    line-height: .5px;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #242932;
+    color: #3535eefd;
+    text-align: center;
+    padding: 0 15px;
+    border: none;
+    cursor: pointer;
+    margin: 2em;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.container .btn-f .alert .foot button:hover{
+    background: #272727;
+}
+
+/* **************************************************************************** */
+/* float button */
+
+.container .btn-f .bubble{
+    position: fixed;
+    background: #000000b5;
+    width: 4em;
+    height: 4em;
+    bottom: 2em;
+    right: 2em;
+    z-index: 3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .btn-f .bubble:hover{
+    transform: scale(1.2);
+}
+
+.container .btn-f .bubble img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* **************************************************************************** */
+/* formulario para el registro y actualización de datos */
+.container .btn-f .login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    width: 40vw;
+    border-radius: 12px;
+    border: 1px solid rgb(26, 25, 25);
+    position: fixed;
+    top: 3.5em;
+    left: 25em;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: #000000;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+} 
+
+.container .btn-f.show .login-form{
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+    transform: scale(1.1);
+}
+
+.container .btn-f .login-form .title-login{
+    color: #7070fffd;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 25px;
+    font-weight: 800;
+    line-height: 0.8px;
+}
+
+.container .btn-f .login-form .close{
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    font-size: 24px;
+    color: #d4661cc0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .btn-f .login-form .close:hover{
+    color: #fc6705fa;
+}
+
+.container .btn-f .login-form .warpinput100{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 8px;
+}
+
+.container .btn-f .login-form input{
+    line-height: .5px;
+    color: #666666;
+    background-color: #242932;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+    border: none;
+    outline: none;
+}
+
+.container .btn-f .login-form button{
+    line-height: .5px;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #242932;
+    color: #3535eefd;
+    text-align: center;
+    padding: 0 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.container .btn-f .login-form button:hover{
+    background: #272727;
+}
+
+.container .btn-f .login-form .warpinput100 .icon-main{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 25px;
+    pointer-events: none;
+}
+
+.container .btn-f .login-form .warpinput100 .icon-main svg{
+    fill: #666666;
+}
+
+/* **************************************************************************** */
+/* barra de busqueda */
+.container .search-bar-body{
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    top: 8%;
+    right: 2em;
+    width: 14rem;
+    height: 10%;
+    z-index: 1;
+}
+
+.container .search-bar-body .icn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 5rem;
+    height: 4rem;
+    background: #000000b5;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container .search-bar-body .icn:hover{
+    transition: 0.5s;
+    background: #03060abb;
+    width: 14rem;
+}
+
+.container .search-bar-body .icn input{
+    background-color: #242932;
+    line-height: .5px;
+    color: #7070fffd;
+    display: block;
+    width: 70%;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0 30px 0 30px;
+    border: none;
+    outline: none;
+}
+
+.container .search-bar-body .icn img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 12px;
+    margin-left: 9px;
+}
+
+/* **************************************************************************** */
+/* cards para desplegar la lista de clientes */
+
+.container .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 22em;
+    margin: 15px;
+    background: transparent;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.container .card:hover{
+    transform: scale(1.05);
+}
+
+.container .card .foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #242932;
+    width: 25%;
+    border-radius: 50%;
+    transform: scale(1.3);
+    z-index: 1;
+}
+
+.container .card .foto .pt{
+    width: 6vw;
+    height: 12vh;
+    border-radius: 50%;
+    border: 2px solid #7070fffd;
+}
+
+.container .card .info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: .5em .6em 0 1.2em;
+    height: 6.5em;
+    border-radius: 10px;
+    background: #000000b5;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    width: 80%;
+}
+
+.container .card .info .title{
+    width: 90%;
+}
+
+.container .card .info .title .datos{
+    text-align: left;
+    width: 100%;
+    padding: 2px;
+}
+
+.p1{
+    font-weight: bold;
+    color: #7070fffd;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+p{
+    color: #5c6868;
+    font-size: 12px;
+    margin-right: 7px;
+}
+
+.container .card .info .options{
+    position: absolute;
+    left: 12em;
+    width: 4em;
+    height: 1.4em;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.container .card .info .options .points{
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: #d4661cc0;
+    cursor: pointer;
+    padding-left: 2.5em;
+    transition: all 0.3s ease;
+}
+
+.container .card .info .options:hover{
+    height: 5em;
+}
+
+.container .card .info .options .points:hover{
+    color: #fc6705fa;
+}
+
+.container .card .info .options .menu .box-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000000;
+    border-radius: 5px;
+    z-index: 3;
+    border: 1px solid #242932;
+}
+
+.container .card .info .options .menu .box-btn div{
+    padding: 2px 5px 2px 5px;
+    width: 100%;
+}
+
+.container .card .info .options .menu .box-btn div:hover{
+    background-color: #242932;
+}
+
+.container .card .info .title .datos div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    color: #5c6868;
+}
+
+.container .card .info .title .datos div span{
+    color: #d4661cc0;
+    margin-right: 7px;
+}
+
+.errMsg{
+    position: fixed;
+    top: 9em;
+    right: 2em;
+    background-color: #000000b5;
+    border-radius: 10px;
+    width: 10em;
+    padding: 1em;
+}
+
+.errMsg span{
+    font-size: .8em;
+    color: #fc6705fa;
+}
+
+
+
+
+

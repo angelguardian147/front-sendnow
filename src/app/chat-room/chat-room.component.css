@@ -1,0 +1,318 @@
+
+.body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70em;
+}
+
+/* chat room */
+
+.container .chatRoom{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 45em;
+    height: 90vh;
+    position: fixed;
+    top: 2em;
+    left: 18em;
+    transition: all 0.3s ease-in-out;
+}
+
+/* cabecera */
+.container .chatRoom .head{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    top: 2em;
+    width: 100%;
+    height: 5em;
+    background: #000000b5;
+    border-radius: 10px;
+    padding: 0 1em 0 .5em;
+}
+
+.container .chatRoom .head .foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    border-radius: 50%;
+}
+
+.container .chatRoom .head .foto .pt{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+.container .chatRoom .head .name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 70%;
+}
+
+.container .chatRoom .head .name p{
+    color: #7070fffd;
+    font-size: 18px;
+}
+
+.container .chatRoom .head .notification{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 25%;
+}
+
+.icon{
+    width: 3vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .chatRoom .head .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height: 2em;
+}
+
+.container .chatRoom .head .options .points{
+    font-size: 40px;
+    color: #3535eefd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 2em;
+}
+
+.container .chatRoom .head .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1em;
+}
+
+.container .chatRoom .head .back .points{
+    font-size: 40px;
+    color: #3535eefd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .chatRoom .head .options .points:hover{
+    color: #222272fd;
+}
+
+.container .chatRoom .head .back .points:hover{
+    color: #222272fd;
+}
+
+/* contenido para los chats */
+
+.container .chatRoom .contents{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: 25em;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.container .chatRoom .contents::-webkit-scrollbar{
+    display: none;
+}
+
+.container .chatRoom .contents .ct-box{
+    width: 100%;
+}
+
+.container .chatRoom .contents .boxMsg{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    width: 100%;
+    height: 40%;
+    padding: 2px;
+    background-color: transparent;
+}
+
+.container .chatRoom .contents .boxMsg .arrive{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.container .chatRoom .contents .boxMsg .arrive .tab{
+    height: 8.02em;
+    width: 2em;
+    margin-top: 1em;
+    background: #000000b5;
+    border-right: 1px solid #000000b5;
+    clip-path: polygon(45% 0, 100% 20%, 100% 0);
+}
+
+.container .chatRoom .contents .boxMsg .arrive .message-arrive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000000b5;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+    border-radius: 0 10px 10px 10px;
+    width: 45%;
+}
+
+.container .chatRoom .contents .boxMsg .arrive .message-arrive .text{
+    color: #aeb9b9;
+    font-size: 14px;
+    text-align: justify;
+    width: 100%;
+    margin: .5em 0 .5em 0;
+}
+
+.container .chatRoom .contents .boxMsg .arrive .message-arrive .name{
+    font-weight: bold;
+    color: #7070fffd;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+.container .chatRoom .contents .boxMsg .arrive .message-arrive .date{
+    color: #d4661cc0;
+    text-align: right;
+    font-size: 12px;
+    width: 100%;
+}
+
+.container .chatRoom .contents .boxMsg .send{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.container .chatRoom .contents .boxMsg .send .tab{
+    height: 8.02em;
+    width: 2em;
+    margin-top: 1em;
+    border-left: 1px solid #383737b5;
+    clip-path: polygon(0 0, 0 20%, 45% 0);
+    background: #383737b5;
+}
+
+.container .chatRoom .contents .boxMsg .send .message-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #383737b5;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+    right: 0;
+    border-radius: 10px 0 10px 10px;
+    width: 45%;
+}
+
+.container .chatRoom .contents .boxMsg .send .message-send .text{
+    color: #aeb9b9;
+    font-size: 14px;
+    text-align: justify;
+    width: 100%;
+    margin: .5em 0 .5em 0;
+}
+
+.container .chatRoom .contents .boxMsg .send .message-send .date{
+    color: #ff6600c0;
+    text-align: right;
+    font-size: 12px;
+    width: 100%;
+}
+
+.container .chatRoom .contents .boxMsg .send .message-send .name{
+    font-weight: bold;
+    color: #000000;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+.container .chatRoom .foot{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    top: 2em;
+    width: 100%;
+    height: 5em;
+    background: #000000b5;
+    border-radius: 10px;
+    padding: 0 .5em 0 1em;
+}
+
+.container .chatRoom .foot .stick{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .chatRoom .foot .atck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .chatRoom .foot .voice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .chatRoom .foot .send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .chatRoom .foot .icon{
+    margin-right: .6em;
+    transform: scale(.9);
+}
+
+.container .chatRoom .foot .textbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    width: 40em;
+}
+
+.container .chatRoom .foot .textbox input{
+    line-height: .5px;
+    color: #aeb9b9;
+    background-color: #242932;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    padding: 0 30px 0 30px;
+    border: none;
+    outline: none;
+}

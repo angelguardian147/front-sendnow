@@ -1,0 +1,25 @@
+
+<div class="body-avatar" *ngIf="access">
+    <div class="user">
+        <div class="container">
+            <div class="photo">
+                <img class="avatar" src="../assets/face3.jpg" alt="Not Found">
+            </div>
+            <div class="data">
+                <p class="username">{{user.username}}</p>
+                <p class="email">{{user.email}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-bar-body" *ngIf="access">
+    <ul>
+        <li [class]="activeA"><img src="../assets/home.png" alt=""><a routerLink="clients" (click)="active(activeA)" id="home">Home</a></li>
+        <li [class]="activeB"><img src="../assets/chat2.png" alt=""><a routerLink="chats" (click)="active(activeB)" id="chat">Chat</a></li>
+        <li [class]="activeC"><img src="../assets/engine.png" alt=""><a>Settings</a></li>
+        <li [class]="activeD"><img src="../assets/campana.png" alt=""><a>Notifications</a></li>
+        <li><img src="../assets/close.png" alt=""><a (click)="logOut()">Log Out</a></li>
+    </ul>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,94 @@
+
+<div class="body">
+
+    <div class="container">
+
+        <div class="pop">
+
+            <div class="chatRoom">
+
+                <div class="head">
+
+                    <div class="back">
+                        <span (click)="offShow()" class="points">&#60;</span>
+                    </div>
+    
+                    <div class="foto">
+                        <img class="pt" src="../../assets/face3.jpg" alt="Not found">
+                    </div>
+    
+                    <div class="name">
+                        <p>{{client.firstName}}</p>
+                    </div>
+    
+                    <div class="notification">
+                        <img class="icon" src="../../assets/campana.png" alt="Not found">
+                    </div>
+    
+                    <div class="options">
+                        <span class="points">&#8230;</span>
+                    </div>
+    
+                </div>
+    
+                <div class="contents" >
+
+                    <div class="ct-box" *ngIf="sinChat">
+
+                        <div [attr.scrollTop]="scrollTop" class="boxMsg" id="boxMsg" *ngFor="let cht of chat.content">
+
+                            <div class="arrive" *ngIf="hasRecived(cht.user_email)">
+                                <div class="tab"></div>
+                                <div class="message-arrive">
+                                    <p class="name">{{client.firstName}}</p>
+                                    <p class="text">{{cht.message}}</p>
+                                    <p class="date">{{cht.date | date}}</p>
+                                </div>
+                            </div>
+        
+                            <div class="send" *ngIf="hasSent(cht.user_email)">
+                                <div class="message-send">
+                                    <p class="name">{{username}}</p>
+                                    <p class="text">{{cht.message}}</p>
+                                    <p class="date">{{cht.date | date}}</p>
+                                </div>
+                                <div class="tab"></div>
+                            </div>
+        
+                        </div>
+
+                    </div>
+    
+                </div>
+    
+                <div class="foot">
+    
+                    <div class="stick">
+                        <img class="icon" src="../../assets/stick.png" alt="Not found">
+                    </div>
+    
+                    <div class="atck">
+                        <img class="icon" src="../../assets/up.png" alt="Not found">
+                    </div>
+    
+                    <div class="textbox">
+                        <input type="text" placeholder="Send a text" [(ngModel)]="message">
+                    </div>
+    
+                    <div class="voice">
+                        <img class="icon" src="../../assets/sound.png" alt="Not found">
+                    </div>
+    
+                    <div class="send">
+                        <img class="icon" (click)="sendText()" src="../../assets/send.png" alt="Not found">
+                    </div>
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
